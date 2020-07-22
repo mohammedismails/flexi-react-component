@@ -6,7 +6,7 @@ const Display = ({ name, place }) => {
     return (
         <div className="flexi">
             <Card bg='light' border="secondary" text='dark' style={{ width: '18rem' }}>
-                <Card.Body>{name} {place}</Card.Body>
+                <Card.Body>I am {name} from {place} state!!</Card.Body>
             </Card>
         </div>
     )

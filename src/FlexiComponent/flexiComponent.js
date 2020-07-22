@@ -18,6 +18,9 @@ const Flexi = ({ onSubmitFunc, config }) => {
 
   const changeHandlerDD = event => setDD(event.target.value);
 
+  /**
+  * 
+  */
   const formSubmitHandler = event => {
     event.preventDefault();
     onSubmitFunc({ name: inputVal, place: DDVal })
@@ -31,7 +34,7 @@ const Flexi = ({ onSubmitFunc, config }) => {
         <Card.Body>
           <Form>
             {(config.items.length > 0)
-              && config.items.map((value, index) => {
+              ? config.items.map((value, index) => {
                 if (value.type === "TextField") {
                   return (
                     <div key={index} >
@@ -58,7 +61,7 @@ const Flexi = ({ onSubmitFunc, config }) => {
                   );
                 }
               })
-              || <p>No data received</p>
+              : <p>No data received</p>
             }
             <Button variant="secondary" size="nm" type="submit" onClick={formSubmitHandler}>
               Submit
