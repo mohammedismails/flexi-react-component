@@ -38,8 +38,6 @@ const Flexi = ({ onSubmitFunc, config }) => {
                       <Form.Group controlId="formBasic">
                         <Form.Label>{value.label}</Form.Label>
                         <Form.Control size="sm" type="input" placeholder="Enter Name" id={value.label} onChange={changeHandler} />
-                        {/* <label htmlFor={value.label}>{value.label}:</label>
-                    <input type="text" id={value.label} onChange={changeHandler} /> */}
                       </Form.Group>
                     </div>
                   );
@@ -55,13 +53,6 @@ const Flexi = ({ onSubmitFunc, config }) => {
                             return <option key={index} value={ddOption}>{ddOption}</option>;
                           })}
                         </Form.Control>
-                        {/* <label htmlFor={value.label}>{value.label}:</label>
-                  <select type="text" id={value.label} onChange={changeHandlerDD}>
-                    <option value="">select from options</option>
-                    {value.values.map((ddOption, index) => {
-                      return <option key={index} value={ddOption}>{ddOption}</option>;
-                    })}
-                  </select> */}
                       </Form.Group>
                     </div>
                   );
